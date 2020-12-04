@@ -65,8 +65,13 @@ public class SearchableActivity extends AppCompatActivity {
     private void handleIntent(Intent intent) {
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = intent.getStringExtra(SearchManager.QUERY);
+            if (query != null) {
+                Log.d("myTag", query);
+            }
             Cursor c = db.getWordMatches(query, null);
-            Log.d("myTag", String.valueOf(c.getColumnIndexOrThrow("WORD")));
+            if (c != null) {
+                Log.d("myTag", String.valueOf(c.getColumnIndexOrThrow("WORD")));
+            }
             //use the query to search your data somehow
         }
     }

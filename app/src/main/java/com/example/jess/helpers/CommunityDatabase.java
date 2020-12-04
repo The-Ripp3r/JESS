@@ -27,7 +27,7 @@ public class CommunityDatabase {
 
     private static final String DATABASE_NAME = "DICTIONARY";
     private static final String FTS_VIRTUAL_TABLE = "FTS";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 4;
 
     private final DatabaseOpenHelper databaseOpenHelper;
 
@@ -67,15 +67,20 @@ public class CommunityDatabase {
         }
 
         private void loadDictionary() {
-            new Thread(new Runnable() {
-                public void run() {
-                    try {
-                        loadWords();
-                    } catch (IOException e) {
-                        throw new RuntimeException(e);
-                    }
-                }
-            }).start();
+            try {
+                loadWords();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+//            new Thread(new Runnable() {
+//                public void run() {
+//                    try {
+//                        loadWords();
+//                    } catch (IOException e) {
+//                        throw new RuntimeException(e);
+//                    }
+//                }
+//            }).start();
         }
 
         private void loadWords() throws IOException {
@@ -83,12 +88,16 @@ public class CommunityDatabase {
             InputStream inputStream = resources.openRawResource(R.raw.definitions);
             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
 
+            Log.d(TAG, "reading:");
+
             try {
                 String line;
                 while ((line = reader.readLine()) != null) {
+                    Log.d(TAG, "line: " + line);
                     String[] strings = TextUtils.split(line, "-");
                     if (strings.length < 2) continue;
                     long id = addWord(strings[0].trim(), strings[1].trim());
+                    Log.d(TAG, strings[0].trim() + " & " + strings[1].trim());
                     if (id < 0) {
                         Log.e(TAG, "unable to add word: " + strings[0].trim());
                     }
@@ -114,11 +123,14 @@ public class CommunityDatabase {
         return query(selection, selectionArgs, columns);
     }
 
+    SQLiteDatabase db;
+
     private Cursor query(String selection, String[] selectionArgs, String[] columns) {
+        db = databaseOpenHelper.getWritableDatabase();
         SQLiteQueryBuilder builder = new SQLiteQueryBuilder();
         builder.setTables(FTS_VIRTUAL_TABLE);
 
-        Cursor cursor = builder.query(databaseOpenHelper.getReadableDatabase(),
+        Cursor cursor = builder.query(db,
                 columns, selection, selectionArgs, null, null, null);
 
         if (cursor == null) {
