@@ -1,4 +1,4 @@
-package com.example.jess.ui.home;
+package com.example.jess.ui.map;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
