@@ -18,4 +18,6 @@
         <item>Enable Instant Placement</item>
     </string-array>
     <string name="title_activity_maps">Map</string>
+    <string name="search_hint">communities</string>
+    <string name="search_title">Search communities</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.jess.ui.dashboard;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.jess.R;
+import com.example.jess.SearchableActivity;
 
 public class CommunityFragment extends Fragment {
 
@@ -24,6 +26,7 @@ public class CommunityFragment extends Fragment {
                 new ViewModelProvider(this).get(CommunityViewModel.class);
         View root = inflater.inflate(R.layout.fragment_community, container, false);
         final TextView textView = root.findViewById(R.id.text_dashboard);
+        root.findViewById(R.id.search_button).setOnClickListener(this::startSearch);
         communityViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
@@ -31,5 +34,10 @@ public class CommunityFragment extends Fragment {
             }
         });
         return root;
+    }
+
+    public void startSearch(View view) {
+        Intent intent = new Intent(CommunityFragment.this.getActivity(), SearchableActivity.class);
+        startActivity(intent);
     }
 }

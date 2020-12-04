@@ -57,9 +57,16 @@
             android:name=".ARActivity"
             android:parentActivityName=".MainActivity" />
 
-        <meta-data
-            android:name="com.google.ar.core"
-            android:value="required" />
+        <activity android:name=".SearchableActivity"
+                  android:parentActivityName="MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <meta-data android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
+        </activity>
+
+        <meta-data android:name="com.google.ar.core" android:value="required" />
     </application>
 
 </manifest>
