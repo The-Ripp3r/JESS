@@ -19,7 +19,21 @@
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.example.jess.ui.notifications.ProfileFragment"
+        android:name="com.example.jess.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/navigation_my_posts"
+        android:name="com.example.jess.ui.myPosts.MyPostsFragment"
+        android:label="@string/title_my_posts"
+        tools:layout="@layout/fragment_my_posts" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_my_communities"
+        android:name="com.example.jess.ui.myCommunities.MyCommunitiesFragment"
+        android:label="@string/title_my_communities"
+        tools:layout="@layout/fragment_my_communities" >
+    </fragment>
 </navigation>

@@ -1,4 +1,4 @@
-package com.example.jess.ui.notifications;
+package com.example.jess.ui.profile;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
