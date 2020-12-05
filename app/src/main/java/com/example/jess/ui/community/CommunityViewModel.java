@@ -1,4 +1,4 @@
-package com.example.jess.ui.dashboard;
+package com.example.jess.ui.community;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

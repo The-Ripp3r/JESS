@@ -1,5 +1,6 @@
 package com.example.jess.ui.map;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,6 +43,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         }
     }
 
+    @SuppressLint("MissingPermission")
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
@@ -52,17 +54,17 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         }
 
         for (Post post : Database.NEARBY_POSTS) {
-            mMap.addMarker(new MarkerOptions()
-                    .position(post.latlng)
-                    .title(post.title)
-                    .snippet(post.description + "\n\n -" + post.username + " " + post.datePosted));
+            mMap.addMarker(new MarkerOptions().position(post.latlng)).setTag(post);
         }
 
+        PostInfoWindowAdapter infoWindow = new PostInfoWindowAdapter(getActivity());
+        mMap.setInfoWindowAdapter(infoWindow);
         mMap.setMaxZoomPreference(20);
         mMap.setMinZoomPreference(15);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(Database.NEARBY_POSTS[0].latlng));
     }
 
+    @SuppressLint("MissingPermission")
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] results) {
         super.onRequestPermissionsResult(requestCode, permissions, results);

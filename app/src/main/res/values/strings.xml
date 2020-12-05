@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">JESS</string>
     <string name="title_map">Map</string>
-    <string name="title_community">Community</string>
+    <string name="explore_posts">Explore</string>
+    <string name="title_community">Communities</string>
+    <string name="explore_community">Discover Communities</string>
     <string name="title_profile">Profile</string>
     <string name="depth_use_explanation" translatable="false">When Depth is enabled on supported devices, virtual objects adapt to the environment by blending in with the real world.</string>
     <string name="button_text_enable_depth" translatable="false">Enable</string>
@@ -20,4 +22,8 @@
     <string name="title_activity_maps">Map</string>
     <string name="search_hint">communities</string>
     <string name="search_title">Search communities</string>
+    <string name="no_results">No results found.</string>
+    <string name="join_community">Join</string>
+    <string name="leave_community">Leave</string>
+    <string name="navigate">Navigate</string>
 </resources>
