@@ -12,6 +12,7 @@ public class Post {
     public String description;
     public String musicUrl;
     public Community community;
+    public int hoursAgo;
 
     public Post(String username,
                 String datePosted,
@@ -27,6 +28,7 @@ public class Post {
         this.description = description;
         this.musicUrl = musicUrl;
         this.community = community;
+        this.hoursAgo = (int) (Math.random() * (24));
     }
 
     @Override

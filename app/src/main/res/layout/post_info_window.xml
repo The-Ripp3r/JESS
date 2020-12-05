@@ -57,6 +57,7 @@
     <TextView
         android:id="@+id/map_post_description"
         android:layout_width="wrap_content"
+        android:minWidth="200dp"
         android:maxWidth="300dp"
         android:layout_height="wrap_content"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -64,5 +65,5 @@
         app:layout_constraintTop_toBottomOf="@id/map_post_author"
         android:maxLines="10"
         android:ellipsize="end"
-        tools:text="it's that time of the yearasdfasdfasdfasfasdf" />
+        tools:text="it's that time of the year" />
 </LinearLayout>

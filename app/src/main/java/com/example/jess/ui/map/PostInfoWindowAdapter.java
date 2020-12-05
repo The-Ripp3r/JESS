@@ -60,7 +60,7 @@ public class PostInfoWindowAdapter implements GoogleMap.InfoWindowAdapter {
         community.setText("in " + post.community.getName());
 
         TextView timeAgo = view.findViewById(R.id.map_post_time);
-        timeAgo.setText("3hrs ago");
+        timeAgo.setText(post.hoursAgo + "hrs ago");
         return view;
     }
 }
