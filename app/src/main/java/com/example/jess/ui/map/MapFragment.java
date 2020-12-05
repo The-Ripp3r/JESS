@@ -1,14 +1,20 @@
 package com.example.jess.ui.map;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import com.example.jess.Database;
@@ -19,6 +25,8 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -54,7 +62,9 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         }
 
         for (Post post : Database.NEARBY_POSTS) {
-            mMap.addMarker(new MarkerOptions().position(post.latlng)).setTag(post);
+            mMap.addMarker(new MarkerOptions()
+                    .position(post.latlng)
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE))).setTag(post);
         }
 
         PostInfoWindowAdapter infoWindow = new PostInfoWindowAdapter(getActivity());

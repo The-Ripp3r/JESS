@@ -1,73 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_horizontal_margin"
     tools:context=".ui.profile.ProfileFragment">
 
     <TextView
         android:id="@+id/hello_user"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.076" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:layout_marginBottom="48dp"
+        tools:text="hi yinj"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/camera_button"
-        android:layout_width="96dp"
-        android:layout_height="101dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="80dp"
-        android:background="@drawable/outline_button_effect_secondary"
-        android:text="Camera"
-        android:textColor="@color/pink"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/my_communities_button"
-        app:layout_constraintEnd_toStartOf="@+id/hello_user"
-        app:layout_constraintHorizontal_bias="0.035"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.638" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="48dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:drawableTop="@drawable/ic_camera"
+        android:drawableTint="@color/dark_gray"
+        android:background="@color/yellow"
+        android:textColor="@color/dark_gray"
+        android:text="Create a post" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/my_communities_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:drawableTop="@drawable/ic_group"
+            android:background="@color/pink"
+            android:textColor="@color/white"
+            android:drawableTint="@color/white"
+            android:paddingVertical="48dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/title_my_communities" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/my_communities_button"
-        android:layout_width="263dp"
-        android:layout_height="91dp"
-        android:textSize="20sp"
-        android:text="My Communities"
-        app:layout_constraintBottom_toTopOf="@+id/my_posts_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.459"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.896"
-        android:textColor="@color/blue"
-        android:background="@drawable/outline_button_effect" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/my_posts_button"
-        android:layout_width="263dp"
-        android:layout_height="91dp"
-        android:textSize="20sp"
-        android:layout_marginTop="200dp"
-        android:text="My Posts"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.484"
-        android:textColor="@color/blue"
-        android:background="@drawable/outline_button_effect" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/my_posts_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/white"
+            android:drawableTint="@color/white"
+            android:drawableTop="@drawable/ic_post"
+            android:paddingVertical="48dp"
+            android:background="@color/blue"
+            android:text="@string/title_my_posts"/>
+    </LinearLayout>
+</LinearLayout>

@@ -34,7 +34,7 @@
         android:layout_width="72dp"
         android:layout_height="wrap_content"
         android:text="@string/join_community"
-        android:textColor="@color/blue"
+        android:textColor="@color/text_color_effect"
         android:background="@drawable/outline_button_effect" />
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/leave_button"
@@ -42,6 +42,6 @@
         android:layout_width="72dp"
         android:layout_height="wrap_content"
         android:text="@string/leave_community"
-        android:textColor="@color/pink"
+        android:textColor="@color/text_color_effect_secondary"
         android:background="@drawable/outline_button_effect_secondary" />
 </LinearLayout>

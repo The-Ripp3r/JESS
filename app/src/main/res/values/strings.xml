@@ -26,4 +26,6 @@
     <string name="join_community">Join</string>
     <string name="leave_community">Leave</string>
     <string name="navigate">Navigate</string>
+    <string name="title_my_posts">My posts</string>
+    <string name="title_my_communities">My communities</string>
 </resources>
