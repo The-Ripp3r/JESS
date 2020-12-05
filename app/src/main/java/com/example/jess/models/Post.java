@@ -2,8 +2,6 @@ package com.example.jess.models;
 
 import com.google.android.gms.maps.model.LatLng;
 
-import java.util.Objects;
-
 public class Post {
     public String username;
     public String datePosted;
@@ -13,6 +11,7 @@ public class Post {
     public String musicUrl;
     public Community community;
     public int hoursAgo;
+    public int numLikes;
 
     public Post(String username,
                 String datePosted,
@@ -29,6 +28,35 @@ public class Post {
         this.musicUrl = musicUrl;
         this.community = community;
         this.hoursAgo = (int) (Math.random() * (24));
+        this.numLikes = 0;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public int getHoursAgo() {
+        return hoursAgo;
+    }
+
+    public Community getCommunity() {
+        return community;
+    }
+
+    public int getNumLikes() {
+        return numLikes;
+    }
+
+    public void addLikes(int diff) {
+        numLikes += diff;
     }
 
     @Override

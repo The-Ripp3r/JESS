@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:background="@drawable/list_background"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="3">
+        <TextView
+            android:id="@+id/post_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            tools:text="title"/>
+        <TextView
+            android:id="@+id/post_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            tools:text="who (n hours ago)"/>
+        <TextView
+            android:id="@+id/post_stats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            tools:text="n likes"/>
+        <TextView
+            android:id="@+id/post_description"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:maxLines="1"
+            tools:text="text"
+            android:ellipsize="end"/>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/view_button"
+        android:minWidth="72dp"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:text="View"
+        android:textColor="@color/blue"
+        android:background="@drawable/outline_button_effect" />
+</LinearLayout>

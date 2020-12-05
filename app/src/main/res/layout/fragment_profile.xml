@@ -5,27 +5,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.notifications.ProfileFragment">
+    tools:context=".ui.profile.ProfileFragment">
 
     <TextView
-        android:id="@+id/text_notifications"
+        android:id="@+id/hello_user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.076" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/camera_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="96dp"
+        android:layout_height="101dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/outline_button_effect_secondary"
         android:text="Camera"
+        android:textColor="@color/pink"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/my_communities_button"
+        app:layout_constraintEnd_toStartOf="@+id/hello_user"
+        app:layout_constraintHorizontal_bias="0.035"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.638" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/my_communities_button"
+        android:layout_width="263dp"
+        android:layout_height="91dp"
+        android:textSize="20sp"
+        android:text="My Communities"
+        app:layout_constraintBottom_toTopOf="@+id/my_posts_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.896"
+        android:textColor="@color/blue"
+        android:background="@drawable/outline_button_effect" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/my_posts_button"
+        android:layout_width="263dp"
+        android:layout_height="91dp"
+        android:textSize="20sp"
+        android:layout_marginTop="200dp"
+        android:text="My Posts"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.484"
+        android:textColor="@color/blue"
+        android:background="@drawable/outline_button_effect" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
