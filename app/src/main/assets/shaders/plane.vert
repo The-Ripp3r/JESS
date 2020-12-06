@@ -1,4 +1,3 @@
-#version 300 es
 /*
  * Copyright 2017 Google LLC
  *
@@ -20,9 +19,9 @@ uniform mat4 u_ModelViewProjection;
 uniform mat2 u_PlaneUvMatrix;
 uniform vec3 u_Normal;
 
-layout(location = 0) in vec3 a_XZPositionAlpha; // (x, z, alpha)
+attribute vec3 a_XZPositionAlpha; // (x, z, alpha)
 
-out vec3 v_TexCoordAlpha;
+varying vec3 v_TexCoordAlpha;
 
 void main() {
    vec4 local_pos = vec4(a_XZPositionAlpha.x, 0.0, a_XZPositionAlpha.y, 1.0);

@@ -14,16 +14,20 @@
  * limitations under the License.
  */
 
+uniform mat4 u_ModelView;
 uniform mat4 u_ModelViewProjection;
-uniform vec4 u_Color;
-uniform float u_PointSize;
 
 attribute vec4 a_Position;
+attribute vec3 a_Normal;
+attribute vec2 a_TexCoord;
 
-varying vec4 v_Color;
+varying vec3 v_ViewPosition;
+varying vec3 v_ViewNormal;
+varying vec2 v_TexCoord;
 
 void main() {
-   v_Color = u_Color;
-   gl_Position = u_ModelViewProjection * vec4(a_Position.xyz, 1.0);
-   gl_PointSize = u_PointSize;
+    v_ViewPosition = (u_ModelView * a_Position).xyz;
+    v_ViewNormal = normalize((u_ModelView * vec4(a_Normal, 0.0)).xyz);
+    v_TexCoord = a_TexCoord;
+    gl_Position = u_ModelViewProjection * a_Position;
 }
