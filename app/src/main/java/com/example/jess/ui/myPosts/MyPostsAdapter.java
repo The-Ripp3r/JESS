@@ -1,10 +1,13 @@
 package com.example.jess.ui.myPosts;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -51,6 +54,18 @@ public class MyPostsAdapter extends ArrayAdapter<Post> {
 
         TextView description = (TextView) listItem.findViewById(R.id.post_description);
         description.setText(currentPost.getDescription());
+
+        ImageView audio = (ImageView) listItem.findViewById(R.id.audio_link);
+        if (currentPost.musicUrl != null && !currentPost.musicUrl.isEmpty()) {
+            audio.setOnClickListener((v) -> {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(currentPost.musicUrl));
+                mContext.startActivity(browserIntent);
+            });
+            audio.setVisibility(View.VISIBLE);
+        } else {
+            audio.setVisibility(View.GONE);
+        }
+
 
         return listItem;
     }
