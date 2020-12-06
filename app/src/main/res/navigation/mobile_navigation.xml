@@ -36,4 +36,18 @@
         android:label="@string/title_my_communities"
         tools:layout="@layout/fragment_my_communities" >
     </fragment>
+
+    <fragment
+        android:id="@+id/navigation_main_lobby"
+        android:name="com.example.jess.persistentcloudanchor.MainLobbyFragment"
+        android:label="@string/create_view_posts"
+        tools:layout="@layout/main_lobby" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_create_post"
+        android:name="com.example.jess.ui.CreatePostFragment"
+        android:label="Create a post"
+        tools:layout="@layout/fragment_new_post" >
+    </fragment>
 </navigation>

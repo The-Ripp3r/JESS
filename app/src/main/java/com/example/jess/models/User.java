@@ -1,5 +1,6 @@
 package com.example.jess.models;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,6 +28,13 @@ public class User {
         if (communities != null) {
             communities.remove(community);
         }
+    }
+
+    public void addPost(Post post) {
+        if (posts == null) {
+            posts = new ArrayList<>();
+        }
+        posts.add(post);
     }
 
     public boolean inCommunity(Community community) {

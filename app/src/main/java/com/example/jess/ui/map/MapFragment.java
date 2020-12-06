@@ -71,7 +71,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         mMap.setInfoWindowAdapter(infoWindow);
         mMap.setMaxZoomPreference(20);
         mMap.setMinZoomPreference(15);
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(Database.NEARBY_POSTS[0].latlng));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(Database.NEARBY_POSTS.get(0).latlng));
     }
 
     @SuppressLint("MissingPermission")

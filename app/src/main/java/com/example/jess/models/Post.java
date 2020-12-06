@@ -59,6 +59,26 @@ public class Post {
         numLikes += diff;
     }
 
+    public void setHoursAgo(int hours) {
+        hoursAgo = hours;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setMusicUrl(String musicUrl) {
+        this.musicUrl = musicUrl;
+    }
+
+    public void setCommunity(Community community) {
+        this.community = community;
+    }
+
     @Override
     public String toString() {
         return "Post{" +

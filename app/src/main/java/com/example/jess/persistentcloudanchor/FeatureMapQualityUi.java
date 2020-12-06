@@ -18,7 +18,7 @@ package com.example.jess.persistentcloudanchor;
 import android.opengl.Matrix;
 import com.google.ar.core.Pose;
 import com.google.ar.core.Session.FeatureMapQuality;
-import com.google.ar.core.examples.java.common.rendering.ObjectRenderer;
+import com.example.jess.common.rendering.ObjectRenderer;
 
 /** Helper class to display the Feature Map Quality UI for the Persistent Cloud Anchor Sample. */
 class FeatureMapQualityUi {

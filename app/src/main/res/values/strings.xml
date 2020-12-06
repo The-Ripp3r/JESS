@@ -30,7 +30,7 @@
     <string name="title_my_communities">My communities</string>
     <!-- new shit -->
     <string name="cancel">Cancel</string>
-    <string name="host_button_text">Scan</string>
+    <string name="host_button_text">Create a post</string>
     <string name="host_title_text">Host a Cloud Anchor</string>
     <!-- [CHAR_LIMIT=NONE] -->
     <string name="host_instructions_text">Scan your space to create a new cloud anchor accessible by others</string>
@@ -95,4 +95,9 @@
     <string name="learn_more">Learn more</string>
     <!-- Cloud anchor privacy website. [CHAR_LIMIT=NONE] -->
     <string name="cloud_anchor_website">https://developers.google.com/ar/cloud-anchors-privacy</string>
+    <string name="title_main_lobby">Create</string>
+    <string name="create_view_posts">Create or view posts</string>
+    <string name="new_post_choose_community">Choose a community to post in</string>
+    <string name="choose_a_template">Choose a template</string>
+    <string name="craft_your_post">Craft your post</string>
 </resources>

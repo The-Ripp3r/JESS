@@ -33,8 +33,14 @@ import android.widget.Toast;
 import androidx.annotation.GuardedBy;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
+import com.example.jess.MainActivity;
 import com.example.jess.R;
+import com.example.jess.common.helpers.DisplayRotationHelper;
+import com.example.jess.ui.CreatePostFragment;
 import com.google.ar.core.Anchor;
 import com.google.ar.core.Anchor.CloudAnchorState;
 import com.google.ar.core.ArCoreApk;
@@ -51,13 +57,12 @@ import com.google.ar.core.Session.FeatureMapQuality;
 import com.google.ar.core.Trackable;
 import com.google.ar.core.TrackingState;
 import com.google.ar.core.examples.java.common.helpers.CameraPermissionHelper;
-import com.google.ar.core.examples.java.common.helpers.DisplayRotationHelper;
 import com.google.ar.core.examples.java.common.helpers.FullScreenHelper;
 import com.google.ar.core.examples.java.common.helpers.TrackingStateHelper;
-import com.google.ar.core.examples.java.common.rendering.BackgroundRenderer;
-import com.google.ar.core.examples.java.common.rendering.ObjectRenderer;
-import com.google.ar.core.examples.java.common.rendering.PlaneRenderer;
-import com.google.ar.core.examples.java.common.rendering.PointCloudRenderer;
+import com.example.jess.common.rendering.BackgroundRenderer;
+import com.example.jess.common.rendering.ObjectRenderer;
+import com.example.jess.common.rendering.PlaneRenderer;
+import com.example.jess.common.rendering.PointCloudRenderer;
 import com.example.jess.persistentcloudanchor.PrivacyNoticeDialogFragment.HostResolveListener;
 import com.google.ar.core.exceptions.CameraNotAvailableException;
 import com.google.ar.core.exceptions.UnavailableApkTooOldException;
@@ -92,7 +97,7 @@ public class CloudAnchorActivity extends AppCompatActivity implements GLSurfaceV
   protected static final double MIN_DISTANCE = 0.2f;
   protected static final double MAX_DISTANCE = 10.0f;
 
-  static Intent newHostingIntent(Context packageContext) {
+  public static Intent newHostingIntent(Context packageContext) {
     Intent intent = new Intent(packageContext, CloudAnchorActivity.class);
     intent.putExtra(EXTRA_HOSTING_MODE, true);
     return intent;
@@ -752,5 +757,12 @@ public class CloudAnchorActivity extends AppCompatActivity implements GLSurfaceV
   public void showNoticeDialog(HostResolveListener listener) {
     DialogFragment dialog = PrivacyNoticeDialogFragment.createDialog(listener);
     dialog.show(getSupportFragmentManager(), PrivacyNoticeDialogFragment.class.getName());
+  }
+
+  @Override
+  public void onBackPressed() {
+    finish();
+    Intent intent = new Intent(this, MainActivity.class);
+    startActivity(intent);
   }
 }

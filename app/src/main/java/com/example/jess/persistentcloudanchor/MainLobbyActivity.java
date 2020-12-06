@@ -21,8 +21,8 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.jess.R;
+import com.example.jess.common.helpers.DisplayRotationHelper;
 import com.google.android.material.button.MaterialButton;
-import com.google.ar.core.examples.java.common.helpers.DisplayRotationHelper;
 
 /** Main Navigation Activity for the Persistent Cloud Anchor Sample. */
 public class MainLobbyActivity extends AppCompatActivity {

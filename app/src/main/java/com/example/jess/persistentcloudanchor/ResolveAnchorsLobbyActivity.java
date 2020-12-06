@@ -25,8 +25,8 @@ import android.widget.Spinner;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.jess.R;
+import com.example.jess.common.helpers.DisplayRotationHelper;
 import com.google.android.material.button.MaterialButton;
-import com.google.ar.core.examples.java.common.helpers.DisplayRotationHelper;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;

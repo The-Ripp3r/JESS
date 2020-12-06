@@ -5,6 +5,7 @@ import com.example.jess.models.Post;
 import com.example.jess.models.User;
 import com.google.android.gms.maps.model.LatLng;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -27,9 +28,8 @@ public class Database {
     public static final List<User> USERS = List.of(
             SIGNED_IN_USER);
 
-    public static final Post[] NEARBY_POSTS = {
+    public static final List<Post> NEARBY_POSTS = new ArrayList<> (List.of(
             POSTS.get(0),
             POSTS.get(1),
-            POSTS.get(2)
-    };
+            POSTS.get(2)));
 }

@@ -33,7 +33,7 @@ public class ProfileFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_profile, container, false);
         final TextView helloUser = root.findViewById(R.id.hello_user);
         helloUser.setText("Hello " + Database.SIGNED_IN_USER.getUsername());
-        root.findViewById(R.id.camera_button).setOnClickListener(this::startCamera);
+        //root.findViewById(R.id.camera_button).setOnClickListener(this::startCamera);
         root.findViewById(R.id.my_communities_button).setOnClickListener(this::showMyCommunities);
         root.findViewById(R.id.my_posts_button).setOnClickListener(this::showMyPosts);
         return root;
