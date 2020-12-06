@@ -35,17 +35,8 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:maxLines="1"
+            android:maxLines="10"
             tools:text="text"
             android:ellipsize="end"/>
     </LinearLayout>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/view_button"
-        android:minWidth="72dp"
-        android:layout_width="72dp"
-        android:layout_height="wrap_content"
-        android:text="View"
-        android:textColor="@color/text_color_effect"
-        android:background="@drawable/outline_button_effect" />
 </LinearLayout>

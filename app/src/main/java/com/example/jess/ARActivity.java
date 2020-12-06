@@ -355,15 +355,15 @@ public class ARActivity extends AppCompatActivity implements SampleRender.Render
                             "models/pawn_roughness_metallic_ao.png",
                             Texture.WrapMode.CLAMP_TO_EDGE,
                             Texture.ColorFormat.LINEAR);
-            virtualObjectMesh = Mesh.createFromAsset(render, "models/pawn.obj");
+            virtualObjectMesh = Mesh.createFromAsset(render, "models/rain_cloud.obj");
             virtualObjectShader =
                     Shader.createFromAssets(
                             render,
                             "shaders/environmental_hdr.vert",
                             "shaders/environmental_hdr.frag",
-                            /*defines=*/ null)
-                            .setTexture("u_AlbedoTexture", virtualObjectAlbedoTexture)
-                            .setTexture("u_RoughnessMetallicAmbientOcclusionTexture", virtualObjectPbrTexture);
+                            /*defines=*/ null);
+                            //.setTexture("u_AlbedoTexture", virtualObjectAlbedoTexture)
+                            //.setTexture("u_RoughnessMetallicAmbientOcclusionTexture", virtualObjectPbrTexture);
         } catch (IOException e) {
             Log.e(TAG, "Failed to read a required asset file", e);
             messageSnackbarHelper.showError(this, "Failed to read a required asset file: " + e);

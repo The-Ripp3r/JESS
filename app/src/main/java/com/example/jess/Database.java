@@ -9,8 +9,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+// Dummy data for app to demonstrate minimum functionality
 public class Database {
-    // dummy data for nearby posts
     public static final Map<String, Community> COMMUNITIES = Map.of(
             "lofi", new Community("lofi", "come chill", 1666),
             "wholesome memes", new Community("wholesome memes", "dedicated to wholesomeness to uplift and support others!", 4170),

@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:maxLines="1"
+            android:maxLines="10"
             tools:text="come chill"
             android:ellipsize="end"/>
     </LinearLayout>
