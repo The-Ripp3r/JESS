@@ -30,11 +30,11 @@
     <string name="title_my_communities">My communities</string>
     <!-- new shit -->
     <string name="cancel">Cancel</string>
-    <string name="host_button_text">Begin hosting</string>
+    <string name="host_button_text">Scan</string>
     <string name="host_title_text">Host a Cloud Anchor</string>
     <!-- [CHAR_LIMIT=NONE] -->
     <string name="host_instructions_text">Scan your space to create a new cloud anchor accessible by others</string>
-    <string name="begin_resolve_button_text">Begin resolving</string>
+    <string name="begin_resolve_button_text">Find a post</string>
     <!-- [CHAR_LIMIT=NONE] -->
     <string name="resolve_title_text">Resolve Cloud Anchor(s)</string>
     <!-- [CHAR_LIMIT=NONE] -->

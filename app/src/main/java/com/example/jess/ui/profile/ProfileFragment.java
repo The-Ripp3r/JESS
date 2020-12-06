@@ -17,6 +17,8 @@ import androidx.navigation.Navigation;
 import com.example.jess.ARActivity;
 import com.example.jess.Database;
 import com.example.jess.R;
+import com.example.jess.persistentcloudanchor.CloudAnchorActivity;
+import com.example.jess.persistentcloudanchor.MainLobbyActivity;
 import com.example.jess.ui.myCommunities.MyCommunitiesFragment;
 import com.example.jess.ui.myPosts.MyPostsFragment;
 
@@ -38,7 +40,8 @@ public class ProfileFragment extends Fragment {
     }
 
     public void startCamera(View view) {
-        Intent intent = new Intent(ProfileFragment.this.getActivity(), ARActivity.class);
+        //get transferred to making post UI
+        Intent intent = new Intent(ProfileFragment.this.getActivity(), MainLobbyActivity.class);
         startActivity(intent);
     }
 
