@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.ar.core.examples.java.persistentcloudanchor;
+package com.example.jess.persistentcloudanchor;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
