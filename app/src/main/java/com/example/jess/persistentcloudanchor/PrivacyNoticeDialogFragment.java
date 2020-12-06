@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.ar.core.examples.java.persistentcloudanchor;
+package com.example.jess.persistentcloudanchor;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -23,6 +23,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import androidx.fragment.app.DialogFragment;
+
+import com.example.jess.R;
 
 /** A DialogFragment for the Privacy Notice Dialog Box. */
 public class PrivacyNoticeDialogFragment extends DialogFragment {

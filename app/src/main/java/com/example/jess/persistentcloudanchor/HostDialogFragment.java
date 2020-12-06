@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.ar.core.examples.java.persistentcloudanchor;
+package com.example.jess.persistentcloudanchor;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -24,6 +24,8 @@ import android.view.View;
 import android.widget.EditText;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentActivity;
+
+import com.example.jess.R;
 import com.google.common.base.Preconditions;
 
 /** A DialogFragment for the Save Anchor Dialog Box. */

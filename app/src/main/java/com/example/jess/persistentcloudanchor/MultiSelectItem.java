@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.ar.core.examples.java.persistentcloudanchor;
+package com.example.jess.persistentcloudanchor;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -23,6 +23,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
+
+import com.example.jess.R;
+
 import java.util.List;
 
 /** Multi-select dropdown for selecting Anchors to resolve. */

@@ -59,7 +59,7 @@
 
 
         <activity
-            android:name=".MainLobbyActivity"
+            android:name=".persistentcloudanchor.MainLobbyActivity"
             android:label="@string/app_name"
             android:configChanges="orientation|screenSize"
             android:exported="true"
@@ -72,7 +72,7 @@
         </activity>
 
         <activity   
-            android:name=".CloudAnchorActivity"
+            android:name=".persistentcloudanchor.CloudAnchorActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
             android:screenOrientation="locked"
@@ -80,7 +80,7 @@
         </activity>
 
         <activity
-            android:name=".ResolveAnchorsLobbyActivity"
+            android:name=".persistentcloudanchor.ResolveAnchorsLobbyActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
             android:screenOrientation="locked"
