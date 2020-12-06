@@ -23,6 +23,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
+
+import com.example.jess.R;
+
 import java.util.List;
 
 /** Multi-select dropdown for selecting Anchors to resolve. */

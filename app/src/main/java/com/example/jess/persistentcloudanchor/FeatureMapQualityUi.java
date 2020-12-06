@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  */
 
-package com.google.ar.core.examples.java.persistentcloudanchor;
+package com.example.jess.persistentcloudanchor;
 
 import android.opengl.Matrix;
 import com.google.ar.core.Pose;
