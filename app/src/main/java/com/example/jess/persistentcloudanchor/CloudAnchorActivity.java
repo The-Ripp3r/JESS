@@ -151,6 +151,10 @@ public class CloudAnchorActivity extends AppCompatActivity implements GLSurfaceV
   private boolean hostedAnchor;
   private long lastEstimateTimestampMillis;
 
+  //Model information
+  private String objModelName="";
+  private String objTextureName="";
+
   @GuardedBy("singleTapLock")
   private MotionEvent queuedSingleTap;
 
@@ -206,6 +210,11 @@ public class CloudAnchorActivity extends AppCompatActivity implements GLSurfaceV
     // Initialize UI components.
     debugText = findViewById(R.id.debug_message);
     userMessageText = findViewById(R.id.user_message);
+
+    objModelName = "models/" + this.getIntent().getStringExtra("selectedObj");
+    objTextureName = "models/" + this.getIntent().getStringExtra("selectedTexture");
+
+
 
     // Initialize Cloud Anchor variables.
     if (this.getIntent().getBooleanExtra(EXTRA_HOSTING_MODE, false)) {
@@ -441,7 +450,7 @@ public class CloudAnchorActivity extends AppCompatActivity implements GLSurfaceV
       planeRenderer.createOnGlThread(this, "models/trigrid.png");
       pointCloudRenderer.createOnGlThread(this);
 
-      anchorObject.createOnGlThread(this, "models/anchor.obj", "models/anchor.png");
+      anchorObject.createOnGlThread(this, objModelName, objTextureName);
       anchorObject.setMaterialProperties(0.0f, 0.75f, 0.1f, 0.5f);
 
       featureMapQualityBarObject.createOnGlThread(
