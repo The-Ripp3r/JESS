@@ -1,8 +1,11 @@
 # JESS (Just Everyday Shared Stories)
+Demo: [https://youtu.be/XE9P_pGIN6w]
 
-# To Run (on emulator, tested on macbook)
+# To Run
 
-Steps a bit modified from: [https://developers.google.com/ar/develop/java/emulator] 
+Tested on emulator on MacBook and physical Android device. Instructions may differ depending one the device you are building on.
+
+Steps a bit modified from: [https://developers.google.com/ar/develop/java/emulator]
 ## Install the tools and packages 
 
 1. Install Android Studio 3.1 or later
@@ -20,9 +23,17 @@ Steps a bit modified from: [https://developers.google.com/ar/develop/java/emulat
 5. Click Show Advanced Settings and check that Camera Back is VirtualScene
 6. Finish to create the new AVD
 
-## Build and run
+## Build and run (for emulator)
 
 1. Download the latest Google_Play_Services_for_AR_1.21.0_x86_for_emulator.apk from [https://github.com/google-ar/arcore-android-sdk/releases]
-2. Start the new device from AVD Manager. When the emulator is started up, literally drag the file onto the device, which installs the google play services (I think for physical devices, you need to install Google Play Services for AR through the Google Play Store).
+2. Start the new device from AVD Manager. When the emulator is started up, drag the file onto the device, which installs the google play services.
 3. Open the android project and press the play button with the new device selected.
+
+## Build and run (physical device)
+1. Install Google Play Services for AR through the Google Play Store
+2. Open the android project, and make sure the physical Android device is connected (you should see the device next to the green arrow in Android Studio)
+3. Press the green play button.
+
+If you cannot run the app, please view the demo to understand the features of JESS.
+
 

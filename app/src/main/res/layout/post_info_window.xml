@@ -14,6 +14,7 @@
             android:id="@+id/map_post_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:maxLength="12"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
             tools:text="finals mood" />
         <TextView
@@ -21,6 +22,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:paddingHorizontal="12dp"
+            android:maxLength="10"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:layout_weight="1"
             tools:text="in Lofi"/>

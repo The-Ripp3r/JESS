@@ -21,11 +21,13 @@ public class User {
         if (communities == null) {
             communities = new ArrayList<>();
         }
+        community.changeNumMembers(1);
         communities.add(community);
     }
 
     public void leaveCommunity(Community community) {
         if (communities != null) {
+            community.changeNumMembers(-1);
             communities.remove(community);
         }
     }

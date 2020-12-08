@@ -13,10 +13,13 @@ import java.util.Map;
 // Dummy data for app to demonstrate minimum functionality
 public class Database {
     public static final Map<String, Community> COMMUNITIES = Map.of(
-            "lofi", new Community("lofi", "come chill", 1666),
-            "wholesome memes", new Community("wholesome memes", "dedicated to wholesomeness to uplift and support others!", 4170),
-            "lore", new Community("lore", "stories of the land", 2000),
-            "bunnies at MIT", new Community("bunnies at MIT", "spotting the bunnies", 2000));
+            "lofi", new Community("lofi", "Come chill", 3141),
+            "Wholesome Memes", new Community("Wholesome Memes", "Dedicated to wholesomeness to uplift and support others!", 4170),
+            "Lore", new Community("Lore", "Stories of the Land", 449),
+            "Bunnies at MIT", new Community("Bunnies at MIT", "Spotting the bunnies", 103),
+            "Cozy Places", new Community("Cozy Places", "Warm places to warm your soul", 3141),
+            "Self Improvement", new Community("Self Improvement", "Make the most of yourself - for that is all there is of you.", 99),
+            "Memory Lane", new Community("Memory Lane", "Dedicated to feeling that bittersweet nostalgia while reminiscing the past", 450));
 
     public static final List<Post> POSTS = List.of(
             new Post("yinj", "12/4/20", new LatLng(42.3578, -71.0933), "finals mood", "its that time of the year asdlkjfwaejrasfasfasdfawerqwersafaslks", "https://youtu.be/lTRiuFIWV54", COMMUNITIES.get("lofi")),

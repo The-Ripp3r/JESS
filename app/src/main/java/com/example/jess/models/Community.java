@@ -26,6 +26,10 @@ public class Community {
         return numMembers;
     }
 
+    public void changeNumMembers(int diff) {
+        numMembers += diff;
+    }
+
     @Override
     public String toString() {
         return "Community{" +
