@@ -1,4 +1,7 @@
 # JESS (Just Everyday Shared Stories)
+A mobile social application in which individuals can join communities to share augmented reality posts
+for others in the same location as them later that day to discover\
+
 [Demo](https://youtu.be/XE9P_pGIN6w) \
 [Extended Abstract](docs/abstract.pdf)
 
