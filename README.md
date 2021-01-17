@@ -1,6 +1,6 @@
 # JESS (Just Everyday Shared Stories)
 Demo: [https://youtu.be/XE9P_pGIN6w]
-[Extended Abstract][docs/abstract.pdf]
+[Extended Abstract](docs/abstract.pdf)
 
 # To Run
 
